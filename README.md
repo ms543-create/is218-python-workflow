@@ -1,26 +1,64 @@
 # IS218 Python Workflow
 
-This repository is used for IS218 coursework to practice Python development, testing with pytest, and connecting GitHub issues to Git commits.
+This project is for practicing Python development, pytest testing, and using GitHub issues with Git commits for IS218.
+
+Repository: https://github.com/ms543-create/is218-python-workflow
+
+## Project Files
+
+- `README.md` - Contains information and instructions for the project.
+- `.gitignore` - Prevents the virtual environment and generated cache files from being tracked by Git.
+- `requirements.txt` - Contains the required pytest version.
+- `app.py` - Contains the `add` function.
+- `tests/test_app.py` - Contains tests for the `add` function.
+
 ## Python Environment
 
-This project uses Python 3.12.14.
+This project was tested with Python 3.12.14.
 
-### Setup
+## Setup
 
-Create and activate the virtual environment:
+Create the virtual environment:
 
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate
+```
 
-Install the project requirements:
+Activate it:
+
+```bash
+source .venv/bin/activate
+```
+
+Install the requirements:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-Verify pytest:
+## Reactivating the Environment
+
+When returning to the project in a new terminal session, activate the existing environment instead of creating it again:
 
 ```bash
-python -m pytest --version
+source .venv/bin/activate
 ```
+
+## Running Tests
+
+Run all tests from the repository root:
+
+```bash
+python -m pytest
+```
+
+The project currently has 2 passing tests.
+
+## Ignored Files
+
+The following files and directories are ignored by Git:
+
+- `.venv/`
+- `__pycache__/`
+- `*.py[cod]`
+- `.pytest_cache/`
